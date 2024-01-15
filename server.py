@@ -42,6 +42,7 @@ async def chat_endpoint(chat_input: ChatInput):
             id=request_id,
             choices=[Choice.from_message(response_message, finish_reason)],
         )
+        print(result)
         return result.dict(exclude_none=True)
     else:
         response_generator = generate_stream(
