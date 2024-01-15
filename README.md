@@ -19,7 +19,7 @@ pip install -r requirements.txt
 Now you can start a blazing fast [vLLM](https://vllm.readthedocs.io/en/latest/getting_started/installation.html) server:
 
 ```shell
-python3 server_vllm.py --model "meetkai/functionary-small-v2.2" --host 0.0.0.0
+python3 server_vllm.py --model "meetkai/functionary-medium-v2.2" --host 0.0.0.0
 ```
 
 ### OpenAI Compatible Usage
