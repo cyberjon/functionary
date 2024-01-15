@@ -177,7 +177,7 @@ class PromptTemplateV2(PromptTemplate):
                 ):  # if tool_call contains "id" for mapping
                     tool_call_ids = [item["id"] for item in tool_calls]
 
-                    tool_messages = [messages[index + 1 + j] for j in range(num_calls)]
+                    tool_messages = [messages[index + j] for j in range(num_calls)]
                     id_2_tool_messages = {
                         item["tool_call_id"]: item for item in tool_messages
                     }
