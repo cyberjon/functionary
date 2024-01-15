@@ -179,7 +179,7 @@ class PromptTemplateV2(PromptTemplate):
 
                     tool_messages = [messages[index + j] for j in range(num_calls)]
                     id_2_tool_messages = {
-                        item["tool_call_id"]: item for item in tool_messages
+                        item[item["id"]]: item for item in tool_messages
                     }
                     new_messages = [id_2_tool_messages[cid] for cid in tool_call_ids]
 
