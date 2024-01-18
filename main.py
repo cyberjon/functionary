@@ -34,7 +34,6 @@ model = Llama(
     n_keep=-1,
     seed=0,
     n_gpu_layers=1,
-    chat_format="functionary",
     n_threads=3,
 )
 tokenizer = AutoTokenizer.from_pretrained(
