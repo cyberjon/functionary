@@ -8,14 +8,6 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse, StreamingResponse
 from llama_cpp import Llama
-from openai_types import (
-    ChatCompletion,
-    ChatCompletionChunk,
-    ChatInput,
-    ChatMessage,
-    Choice,
-    StreamChoice,
-)
 from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer,
@@ -24,6 +16,14 @@ from transformers import (
 )
 
 from functionary.inference_stream import generate_stream
+from functionary.openai_types import (
+    ChatCompletion,
+    ChatCompletionChunk,
+    ChatInput,
+    ChatMessage,
+    Choice,
+    StreamChoice,
+)
 from functionary.prompt_template import get_prompt_template_from_tokenizer
 
 app = FastAPI(title="Functionary API")
